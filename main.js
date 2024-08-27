@@ -19,36 +19,29 @@ form.onsubmit = (Event) => {
 
 function createTodo(text) {
 
-    const checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
-    checkbox.style.display = 'inline';
-    checkbox.addEventListener('change', () => {
+    const todo = document.createElement('li');
+    todo.innerHTML = text;
+    const span = document.createElement('span');
+    span.innerHTML = '\u00d7'
+    todos.appendChild(todo);
+    todo.appendChild(span);
+    localStorage.setItem('todos', JSON.stringify(todoData));
+    todo.onclick = () => {
+        if (todo.className !== 'checked') {
+            todo.className = 'checked';
+        } else {
+            todo.className = '';
+        }
+    }
+
+    span.onclick = () => {
         todoData = todoData.filter(item => {
-            return item !== todo.innerHTML;
+            return item !== todo.innerHTML.replace('<span>×</span>', '');
         })
 
         localStorage.setItem('todos', JSON.stringify(todoData));
 
-        checkbox.remove();
         todo.remove();
-        br.remove();
-    });
-
-    const todo = document.createElement('li');
-    todo.innerHTML = text;
-    todo.style.display = 'inline';
-
-    const br = document.createElement('br');
-
-    todos.appendChild(checkbox);
-    todos.appendChild(todo);
-    todos.appendChild(br);
-
-    localStorage.setItem('todos', JSON.stringify(todoData));
-}
-
-clearBtn.onclick = () => {
-    todos.innerHTML = '';
-    todoData = [];
-    localStorage.removeItem('todos');
+        span.remove();
+    }
 }

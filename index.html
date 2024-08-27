@@ -9,13 +9,15 @@
 </head>
 
 <body>
-    <div id="app">
-        <ul id="todos"></ul>
-        <form>
-            <input type="text" name="" id="todo" placeholder="Make This App Pretty" required>
-            <button type="submit">Submit</button>
-            <button id="clear">Clear</button>
-        </form>
+    <div class="container">
+        <div class="app">
+            <h2>Todolist<img src="./assets/icon.svg" alt="icon"></h2>
+            <form class="input">
+                <input type="text" id="todo" placeholder="Add Your Todo" required>
+                <button type="submit">Add</button>
+            </form>
+            <ul id="todos"></ul>
+        </div>
     </div>
     <script src="./main.js"></script>
 </body>
