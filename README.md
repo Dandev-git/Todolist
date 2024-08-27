@@ -3,6 +3,7 @@
 A simple todolist in which you can add tasks and remove them. 
 
 Thanks to [GreatStack](https://www.youtube.com/@GreatStackDev) for the [tutorial](https://www.youtube.com/watch?v=G0jO8kUrg-I), it helped a lot with the styling of the webpage (I am clueless with CSS).
+
 ---
 
 ## Todo:
