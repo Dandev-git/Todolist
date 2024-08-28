@@ -14,7 +14,7 @@ Thanks to [GreatStack](https://www.youtube.com/@GreatStackDev) for the [tutorial
   - ~~Put the list below the promt~~
   - ~~Make the promt stay still when adding items~~
   - ~~Change functonality for marking as done~~
-  - Make the state of todos save across refreshes
+  - ~~Make the state of todos save across refreshes~~
   - Add Toggleable Dark Mode
 
 ---
