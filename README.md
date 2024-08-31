@@ -1,6 +1,6 @@
 # Todolist
 
-A simple todolist in which you can add tasks and remove them. 
+A simple todolist in which you can add tasks and remove them.
 
 Thanks to [GreatStack](https://www.youtube.com/@GreatStackDev) for the [tutorial](https://www.youtube.com/watch?v=G0jO8kUrg-I), it helped a lot with the styling of the webpage (I am clueless with CSS).
 
@@ -16,7 +16,7 @@ Thanks to [GreatStack](https://www.youtube.com/@GreatStackDev) for the [tutorial
   - ~~Change functonality for marking as done~~
   - ~~Make the state of todos save across refreshes~~
   - ~~Add Toggleable Dark Mode~~
-  - Add transition to dark mode
+  - ~~Add transition to dark mode~~
 
 ---
 
