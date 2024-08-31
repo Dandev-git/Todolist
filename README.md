@@ -22,7 +22,9 @@ Thanks to [GreatStack](https://www.youtube.com/@GreatStackDev) for the [tutorial
 
 ## Screenshots
 
-|          Name             |                Preview                     |
-|          :---:            |                 :---:                      |
-| Empty List                | ![todolist](assets/screenshots/empty.jpeg) | 
-| The List with some items  | ![todolist](assets/screenshots/items.jpeg) | 
+| Name                       | Preview                                          |
+| :---:                      | :---:                                            |
+| Light Empty List           | ![todolist](assets/screenshots/light-empty.jpeg) |
+| Light List With Some Items | ![todolist](assets/screenshots/light-items.jpeg) |
+| Dark Empty List            | ![todolist](assets/screenshots/dark-empty.jpeg)  |
+| Dark List With Some Items  | ![todolist](assets/screenshots/dark-items.jpeg)  |
