@@ -1,4 +1,4 @@
-:root {
+.light {
     --title-color: #1d2671;
     --primary-color: #ff7300;
     --form-background-color: #edeef0;
@@ -7,8 +7,21 @@
     --checked-color: #555555;
     --first-gradient-color: #a7bfe8;
     --second-gradient-color: #6190e8;
+    --text-color: #000000;
+    --background-color: #ffffff;
+}
+
+.dark {
+    --title-color: #747cc0;
+    --primary-color: #ff7300;
+    --form-background-color: #3d3d3d;
+    --hover-color: #555555;
+    --highlight-color: #777777;
+    --checked-color: #777777;
+    --first-gradient-color: #202020;
+    --second-gradient-color: #000000;
     --text-color: #ffffff;
-    
+    --background-color: #2d2d2d;
 }
 
 * {
@@ -28,10 +41,16 @@
 .app {
     width: 100%;
     max-width: 540px;
-    background: #ffffff;
+    background: var(--background-color);
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 10px;
+}
+
+.dark .app {
+    border-width: 2px;
+    border-color: var(--primary-color);
+    border-style: solid;
 }
 
 .app h2 {
@@ -65,12 +84,16 @@ input {
     padding: 10px;
 }
 
+.dark form input {
+    color: var(--text-color);
+}
+
 button {
     border: none;
     outline: none;
     padding: 16px 50px;
     background: var(--primary-color);
-    color: var(--text-color);
+    color: #ffffff;
     font-size: 16px;
     cursor: pointer;
     border-radius: 40px;
@@ -83,6 +106,7 @@ ul li {
     user-select: none;
     cursor: pointer;
     position: relative;
+    color: var(--text-color);
 }
 
 ul li::before {
@@ -126,3 +150,6 @@ ul li span:hover {
     background: var(--hover-color);
 }
 
+#theme-btn {
+    margin-left: auto;
+}

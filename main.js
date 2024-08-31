@@ -1,7 +1,14 @@
 const todos = document.getElementById('todos');
 const form = document.querySelector('form');
 const input = document.getElementById('todo');
-const clearBtn = document.getElementById('clear');
+const themeBtn = document.getElementById('theme-btn');
+
+document.body.classList.add(localStorage.getItem('theme') || 'light');
+if(document.body.classList.contains('dark')) {
+    themeBtn.innerHTML = 'Light';
+} else {
+    themeBtn.innerHTML = 'Dark';
+}
 
 const oldTodos = JSON.parse(localStorage.getItem('todos'));
 let todoData = oldTodos || [];
@@ -47,4 +54,18 @@ function createTodo(text, className) {
         todo.remove();
         span.remove();
     }
+}
+
+themeBtn.onclick = () => {
+    if (document.body.classList.contains('dark')) {
+        document.body.classList.remove('dark');
+        document.body.classList.add('light');
+        themeBtn.innerHTML = 'Light';
+    } else {
+        document.body.classList.remove('light');
+        document.body.classList.add('dark');
+        themeBtn.innerHTML = 'Dark';
+    }
+
+    localStorage.setItem('theme', document.body.classList);
 }
