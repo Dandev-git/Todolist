@@ -1,3 +1,16 @@
+:root {
+    --title-color: #1d2671;
+    --primary-color: #ff7300;
+    --form-background-color: #edeef0;
+    --hover-color: #edeef0;
+    --highlight-color: #555555;
+    --checked-color: #555555;
+    --first-gradient-color: #a7bfe8;
+    --second-gradient-color: #6190e8;
+    --text-color: #ffffff;
+    
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +21,7 @@
 .container {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(135deg, #a7bfe8, #6190e8);
+    background: linear-gradient(135deg, var(--first-gradient-color), var(--second-gradient-color));
     padding: 10px;
 }
 
@@ -22,10 +35,11 @@
 }
 
 .app h2 {
-    color: #1d2671;
+    color: var(--title-color);
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    justify-content: space-between; 
 }
 
 .app h2 img {
@@ -37,7 +51,7 @@ form {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #edeef0;
+    background: var(--form-background-color);
     border-radius: 30px;
     padding-left: 20px;
     margin-bottom: 25px;
@@ -55,8 +69,8 @@ button {
     border: none;
     outline: none;
     padding: 16px 50px;
-    background: #ff7300;
-    color: white;
+    background: var(--primary-color);
+    color: var(--text-color);
     font-size: 16px;
     cursor: pointer;
     border-radius: 40px;
@@ -85,12 +99,12 @@ ul li::before {
 }
 
 ul li.checked {
-    color: #555555;
+    color: var(--checked-color);
     text-decoration: line-through;
 }
 
 ul li.checked::before {
-    color: #555555;
+    color: var(--checked-color);
     text-decoration: line-through;
     background-image: url(./assets/checked.svg);
 }
@@ -102,12 +116,13 @@ ul li span {
     width: 40px;
     height: 40px;
     font-size: 22px;
-    color: #555555;
+    color: var(--checked-color);
     line-height: 40px;
     text-align: center;
     border-radius: 50%;
 }
 
 ul li span:hover {
-    background: #edeef0;
+    background: var(--hover-color);
 }
+
